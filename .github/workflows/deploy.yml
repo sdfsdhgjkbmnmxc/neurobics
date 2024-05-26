@@ -22,6 +22,10 @@ jobs:
         run: yarn install
         working-directory: ./app
 
+      - name: List contents of the app directory
+        run: ls -la
+        working-directory: ./app
+
       - name: Build
         run: yarn build
         working-directory: ./app
