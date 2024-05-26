@@ -1,3 +1,3 @@
 # neurobics
 
-Тренажёр для мозга.
+Тренажёр для мозга: https://sdfsdhgjkbmnmxc.github.io/neurobics/
