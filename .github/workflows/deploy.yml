@@ -18,9 +18,11 @@ jobs:
 
       - name: Install dependencies
         run: yarn install
+        working-directory: ./app
 
       - name: Build
-        run: cd app && yarn build
+        run: yarn build
+        working-directory: ./app
         env:
           NODE_ENV: production
 
