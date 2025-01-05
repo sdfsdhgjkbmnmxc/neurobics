@@ -36,8 +36,15 @@ function changeSpeed(newSpeed) {
 }
 
 function updateColorAndPosition() {
-  const colorName = getRandomElement(colors);
-  const colorValue = getRandomElement(colors);
+   let colorName, colorValue;
+
+  if (Math.random() < 0.1) {
+    colorName = { name: 'ХЛОПОК' };
+    colorValue = { color: 'black' };
+  } else {
+    colorName = getRandomElement(colors);
+    colorValue = getRandomElement(colors);
+  }
 
   const minXMarginPercent = 20;
   const minYMarginPercent = 10;
