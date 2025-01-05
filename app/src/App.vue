@@ -15,11 +15,15 @@ const speeds = [
   { label: 'Быстро', value: 1000 }
 ];
 
-const currentSpeed = ref(Number(localStorage.getItem('updateSpeed')) || 2000);
+function defaultSpeed() {
+  return speeds[1].value;
+}
+
+const currentSpeed = ref(Number(localStorage.getItem('updateSpeed')) || defaultSpeed());
 
 const colorText = ref('');
 const colorStyle = ref('');
-const updateInterval = ref(Number(localStorage.getItem('updateSpeed')) || 2000);
+const updateInterval = ref(Number(localStorage.getItem('updateSpeed')) || defaultSpeed());
 let intervalId = null;
 
 function getRandomElement(array) {
